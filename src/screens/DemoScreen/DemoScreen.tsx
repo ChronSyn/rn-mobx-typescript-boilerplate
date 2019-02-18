@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { inject, observer } from "mobx-react";
 import {Text, View, TouchableOpacity, Image} from 'react-native';
 
+import DemoStatefulComponent from '../../components/DemoStatefulComponent/DemoStatefulComponent';
+
 import styles from '../../constants/styles';
 
 type Props = {
@@ -29,7 +31,7 @@ class RootContainer extends Component <Props>{
               <Text style={styles.buttonText}>-</Text>
             </View>
           </TouchableOpacity>
-          <Text style={styles.welcome}>{ this.props.demoStore.demoNumber }</Text>
+          <DemoStatefulComponent demoStore={this.props.demoStore} />
           <TouchableOpacity onPress={()=>{ this.props.demoStore.increaseDemoNumber() }}>
             <View style={styles.button}>
               <Text style={styles.buttonText}>+</Text>
