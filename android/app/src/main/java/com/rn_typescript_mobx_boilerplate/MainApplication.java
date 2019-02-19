@@ -1,4 +1,4 @@
-package com.rn_payone_boilerplate;
+package com.rn_typescript_mobx_boilerplate;
 
 import android.app.Application;
 
